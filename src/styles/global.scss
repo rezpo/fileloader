@@ -1,0 +1,134 @@
+@import "./mixins.scss";
+@import "./colors.scss";
+@import "./unitsize.scss";
+@import "./breakpoints.scss";
+
+.flex--start {
+  @include flex($alignment: flex-start);
+}
+
+.flex--start-column {
+  @include flex($alignment: flex-start, $direction: column);
+}
+
+.flex--center {
+  @include flex($alignment: center);
+}
+
+.flex--center-column {
+  @include flex($alignment: center, $direction: column);
+}
+
+.flex--end {
+  @include flex($alignment: flex-end);
+}
+
+.flex--end-column {
+  @include flex($alignment: flex-end, $direction: column);
+}
+
+.flex--between {
+  @include flex($alignment: space-between);
+}
+
+.flex--between-column {
+  @include flex($alignment: space-between, $direction: column);
+}
+
+.flex--around {
+  @include flex($alignment: space-around);
+}
+
+.flex--around-column {
+  @include flex($alignment: space-around, $direction: column);
+}
+
+.flex--evenly {
+  @include flex($alignment: space-evenly);
+}
+
+.flex--evenly-column {
+  @include flex($alignment: space-evenly, $direction: column);
+}
+
+.header {
+  &__wrapper {
+    background-color: $tertiary;
+    padding: size(1);
+
+    small {
+      color: $white;
+      font-weight: 500;
+    }
+  }
+}
+
+.nav {
+  &__wrapper {
+    @include flex($alignment: flex-end);
+    width: 100%;
+    margin-bottom: size(2);
+    padding: size(1) size(2);
+  }
+}
+
+.container {
+  &__wrapper {
+    @include flex($flex: 1);
+    padding: size(1);
+  }
+}
+
+.thumbnail {
+  &__container {
+    @include flex($alignment: center, $direction: column);
+  }
+  &__wrapper {
+    width: 14rem;
+    height: auto;
+    
+    img {
+      width: 100%;
+      border-radius: size(1);
+    }
+  }
+}
+
+.datagrid {
+  &__wrapper {
+    height: 600px;
+    width: 100%;
+    padding: size(2);
+  }
+}
+
+.width {
+  &--full {
+    width: 100%;
+  }
+  &--half {
+    width: 50%;
+  }
+}
+
+.gallery {
+  &__wrapper {
+    @include grid-columns(3);
+
+    @media screen and (max-width: $md) {
+      @include grid-columns(2);
+    }
+
+    @media screen and (max-width: $sm) {
+      @include grid-columns(1);
+    }
+  }
+}
+
+.action-element {
+  &-text {
+    color: $tertiary;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

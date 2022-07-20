@@ -1,0 +1,3 @@
+@function size($scale: 1, $base: 8px) {
+  @return $base * $scale;
+}

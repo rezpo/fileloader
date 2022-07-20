@@ -1,0 +1,16 @@
+@mixin flex($flex: auto, $alignment: center, $direction: row) {
+  @if $flex != auto {
+    flex: $flex;
+  } @else {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: $alignment;
+    flex-direction: $direction;
+  }
+}
+
+@mixin grid-columns($columns: 3) {
+  grid-template-columns: repeat($columns, 1fr) !important;
+  gap: size(1) !important;
+}
