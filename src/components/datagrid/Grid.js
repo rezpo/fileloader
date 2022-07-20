@@ -16,7 +16,6 @@ export default function Grid() {
       header: true,
       worker: true,
       complete: (results) => {
-        console.log(results);
         let dataList = [];
         results.data.forEach((item, index) => {
           dataList.push({ ...item, id: index });
@@ -25,6 +24,7 @@ export default function Grid() {
         setData(dataList);
       },
     });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const columns = [
