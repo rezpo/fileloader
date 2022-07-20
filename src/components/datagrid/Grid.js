@@ -24,7 +24,7 @@ export default function Grid() {
         setData(dataList);
       },
     });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const columns = [
@@ -52,8 +52,8 @@ export default function Grid() {
           <DataGrid
             rows={data}
             columns={columns}
-            pageSize={5}
-            rowsPerPageOptions={[5]}
+            pageSize={8}
+            rowsPerPageOptions={[8]}
             checkboxSelection
             disableSelectionOnClick
           />
